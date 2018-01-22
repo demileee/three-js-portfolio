@@ -89,8 +89,9 @@ export default class Content extends Component {
 
         <div className={aboutProjectClasses}>
           <div className={aboutBox}>
-            <h1>Currently, I{`'`}m in <span className={highlight}>Toronto</span> designing <span className={underline}>full-stack</span> web application solutions.</h1>
+            <h1>Currently, I{`'`}m in <span className={highlight}>Toronto</span> designing both <span className={underline}>front- and back-end</span> web application solutions.</h1>
             <br />
+            <h3>Here{`'`}s what I{`'`}m good at:</h3><br />
             <ul>{ skillsList }</ul>
           </div>
 
