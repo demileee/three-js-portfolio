@@ -1,45 +1,200 @@
-.App {
-  text-align: center;
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-#threeJS {
+canvas {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -2;
 }
 
-#head {
+.container {
+  display: block;
+  position: absolute;
+  overflow: scroll;
   z-index: 1;
-  background-color: #111111;
-  color: white;
+  height: 110vh;
+  width: 100%;
   padding: 0 1em;
+}
+
+.home {
   position: fixed;
-  top: 50px;
-  left: 50px;
+  top: 40vh;
+  left: 20vw;
+  transition: top 0.5s;
+  -webkit-transition: top 0.5s;
+  color: white;
+}
+
+.home-mobile {
+  display: block;
+  position: fixed;
+  top: 40vh;
+  left: 0vw;
+  transition: top 0.5s, width 0.7s;
+  -webkit-transition: top 0.5s, width 0.7s;
+  color: white;
+}
+
+.about-projects-container {
+  width: 40vw;
+  display: none;
+  position: fixed;
+  top: 20vh;
+  left: 20vw;
+  color: white;
+}
+
+.about-projects-container-mobile {
+  width: 100vw;
+  display: none;
+  position: fixed;
+  top: 0vh;
+  left: 0vw;
+  color: white;
+}
+
+.about-box {
+  transition: top .5s, background .5s;
+  -webkit-transition: top .5s, background .5s;
+  background: rgba(115, 177, 242, 0.7);
+  padding: 1em;
+}
+
+.about-box-mobile {
+  transition: top .5s, background .5s;
+  -webkit-transition: top .5s, background .5s;
+  background: rgba(115, 177, 242, 0.7);
+  padding: 1em;
+  height: 70vh;
+}
+
+.about-box:hover,
+.about-box-mobile:hover {
+  background: rgba(146, 113, 227, 0.9);
+}
+
+.projects-box {
+  background: none;
+  padding: 0.5em;
+}
+
+.custom-typist {
+  background-color: black;
+  padding: 1em;
+}
+
+.social {
+  display: none;
+  background-color: black;
+  margin-bottom: -3px;
+}
+
+.moveUpHome {
+  top: 20vh;
+}
+
+.moveUpHome-mobile {
+  top: 0;
+  width: 100vw;
+}
+
+.moveUpAbout {
+  top: 40vh;
+}
+
+.moveUpAbout-mobile {
+  top: 20vh;
+}
+
+.visible {
+  display: block;
+}
+
+.invisible {
+  display: none;
+}
+
+.scroll {
+  font-size: 0.8em;
+}
+
+p {
+  line-height: 2em;
+}
+
+.social ul li {
+  display: inline-block;
+  list-style: none;
+  background-color: none;
+  text-transform: uppercase;
+  font-size: 10px;
+  padding: 3px 5px;
+  margin-left: 5px;
+  color: #333333;
+  /* border-radius: 10px; */
+}
+
+.social a {
+  text-decoration: none;
+  color: white;
+}
+
+.social a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.about-box ul li,
+.about-box-mobile ul li {
+  display: inline-block;
+  list-style: none;
+  background-color: rgb(236, 213, 63);
+  text-transform: uppercase;
+  font-size: 10px;
+  padding: 3px 5px;
+  margin-left: 5px;
+  color: #333333;
+  /* border-radius: 10px; */
+}
+
+.about-box-mobile ul li {
+  font-size: 0.7em;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 0.7em;
+}
+
+.about-box li:hover,
+.about-box-mobile li:hover {
+  background-color: rgb(254, 228, 57);
+  cursor: grabbing;
+}
+
+.about-box h1 {
+  font-size: 1.7em;
+}
+
+.about-box-mobile h1 {
+  font-size: 3em;
+}
+
+.underline {
+  border-bottom: 3px red solid;
+}
+
+.highlight {
+  color: rgb(254, 228, 57);
 }
